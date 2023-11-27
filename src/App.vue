@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="column is-half is-offset-one-quarter">
       <div v-for="(poke, index) in pokemons" :key="index">
         <PokemonComponent :name="poke.name" :url="poke.url" :num="index+1" />
       </div>
@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 import PokemonComponent from './components/Pokemon';
 
 export default {

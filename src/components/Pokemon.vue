@@ -1,17 +1,17 @@
 <template>
-    <div>     
+    <div id="pokemon">     
 
 
         <div class="card">
             <div class="card-image">
-                <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                <figure>
+                <img :src="pokemon.front" alt="Placeholder image">
                 </figure>
             </div>
             <div class="card-content">
                 <div class="media">
                 <div class="media-content">
-                    <p class="title is-4">{{ num + " " + formattedName }}</p>
+                    <p class="title is-4">{{ num + " - " + formattedName }}</p>
                     <p class="subtitle is-6">{{ pokemon.type }}</p>
                 </div>
                 </div>
@@ -43,7 +43,11 @@ export default {
     },
     data(){
         return {
-            pokemon: {}
+            pokemon: {
+                type: '',
+                front: '',
+                back: ''
+            }
         }
     },   
     name: 'PokemonComponent',
@@ -61,5 +65,7 @@ export default {
 </script>
 
 <style>
-
+     #pokemon {
+        margin-top: 2%
+     }
 </style>
